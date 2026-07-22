@@ -1,0 +1,29 @@
+import { _a as i } from "chunk-R3L7MKPD.mjs";
+import { Qn as r, fo as c } from "chunk-32ADSF37.mjs";
+import { h as l } from "chunk-DYNCKUFC.mjs";
+function v(o, e, n) {
+  o.scheduler.process(() => {
+    let s = o.tree.root.locales?.map((u) => u.id) ?? [],
+      a = new Set([r, ...s]),
+      t = new Set(e.includedLocales ?? a);
+    (t.has(n) ? t.delete(n) : t.add(n),
+      c(a, t) ? e.set({ includedLocales: void 0 }) : e.set({ includedLocales: Array.from(t) }));
+    let d = new Map(o.stores.localizationStore.expandedSourceGroups);
+    (d.delete(e.id), (o.stores.localizationStore.expandedSourceGroups = d));
+  });
+}
+function f(o, e) {
+  if (i(o, e))
+    return e.includedLocales && !e.includedLocales.includes(r)
+      ? [r, ...e.includedLocales]
+      : e.includedLocales;
+}
+function I(o, e, n) {
+  let s = f(o, e);
+  return l(s) ? s.includes(n) : !0;
+}
+function x(o) {
+  for (let e in o) return [e, o[e]];
+}
+export { v as a, f as b, I as c, x as d };
+//# sourceMappingURL=chunk-2JYO6GAX.mjs.map
