@@ -98,18 +98,6 @@ cd Streamline
 npm install
 ```
 
-### Step 2: Configure Environment Variables
-Create `.env` and `.env.local` files in the root directory:
-```env
-DATABASE_URL="file:./dev.db"
-JWT_SECRET="streamline_jwt_super_secret_access_key_2026_safe"
-JWT_REFRESH_SECRET="streamline_jwt_super_secret_refresh_key_2026_safe"
-GEMINI_API_KEY="AQ.Ab8RN6JSM-EwfEYqXTpwZtLjHFatzs277z4o5XFADJrMvglG1Q"
-RAZORPAY_KEY_ID="rzp_test_TGgxLLNb4O1mL6"
-RAZORPAY_KEY_SECRET="5Q0NJzdEpHyr9Iu0rwve1PRv"
-NEXT_PUBLIC_RAZORPAY_KEY_ID="rzp_test_TGgxLLNb4O1mL6"
-```
-
 ### Step 3: Run Database Migrations & Seed Sample Data
 ```bash
 npm run db:push
